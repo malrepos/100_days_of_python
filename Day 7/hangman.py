@@ -4,15 +4,19 @@ word_list = ["ardvark", "baboon", "camel"]
 
 word_choice = random.choice(word_list)
 
-guess = input("Guess a letter: ").lower()
+print(word_choice)
+
+display = []
 
 for letter in word_choice:
+    display.append("_")
+print(display)
+
+guess = input("Guess a letter: ").lower()
+
+i = 0
+for letter in word_choice:
     if guess == letter:
-        print("Right")
-    else:
-        print("Wrong")
-
-print(guess)
-
-
-print(choice)
+        display[i] = letter
+    i += 1
+print(display)
